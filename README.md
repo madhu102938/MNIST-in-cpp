@@ -9,6 +9,11 @@ Handwritten digit recognition with c++
   - Randomly sampling mini batch
 
 `Neural_network.cpp` contains `main` function which has
+  - Contains implementation for a simple 3 level neural network
+    - Input, hidden and output layer
+    - Images are flatten before feeding into neural net
+    - Hidden layer has tanh activation
+    - CrossEntropy loss is used
   - Foward pass and backward pass
   - Determination of test data accuracy
   - Weights have been initialized according to **Kaiming normal distribution**
