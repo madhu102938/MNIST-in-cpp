@@ -17,6 +17,7 @@ Handwritten digit recognition with c++
   - Foward pass and backward pass
   - Determination of test data accuracy
   - Weights have been initialized according to **Kaiming normal distribution**
+    - Weights of the final layer have been factored down while initialization and bias has not been used for the final layer
 
 <hr>
 
