@@ -1,2 +1,5 @@
 # MNIST-in-cpp
-Handwritten digit recognition with c++
+Handwritten digit recognition with c++  
+
+`Matrix.cpp` contains Matrix operations and other utiliy functions  
+`Neural_network.cpp` contains `main` function which has training loop
