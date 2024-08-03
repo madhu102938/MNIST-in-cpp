@@ -5,11 +5,13 @@ Handwritten digit recognition with c++
   - Generating normal distribution for initialization of weights
   - Matrix multiplication, addition, scalar multiplication, dot product
   - Softmax, accuracy_score
+  - Tanh activation
   - Randomly sampling mini batch
 
 `Neural_network.cpp` contains `main` function which has
   - Foward pass and backward pass
-  - Determination of test data accuracy 
+  - Determination of test data accuracy
+  - Weights have been initialized according to **Kaiming normal distribution**
 
 <hr>
 
