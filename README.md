@@ -6,9 +6,4 @@ Handwritten digit recognition with c++
 
 <hr>
 
-This is the loss and accuracy I achieved over 10000 epochs  
-
-
-![loss](./logs/loss.png)
-
-![accuracy](./logs/accuracy.png)
+This is the loss and accuracy I achieved over 10000 epochs 
