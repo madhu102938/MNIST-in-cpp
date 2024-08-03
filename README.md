@@ -15,7 +15,7 @@ Handwritten digit recognition with c++
 
 Achieved a test accuracy of **91.54%**
 
-This is the loss and accuracy I achieved over 10000 epochs  
+This is the **training loss** and **training accuracy** I achieved over 10000 epochs  
 
 ![loss](./logs/loss.png)
 
