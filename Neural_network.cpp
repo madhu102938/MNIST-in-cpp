@@ -112,6 +112,8 @@ int main()
         loss_accuracy.push_back({loss, accuracy_temp});
 
         // Backward pass
+
+        // Backward pass through Cross Entropy loss and softmax
         vector<vector<double>> dlogits = out_preds;
         for (int i = 0; i < dlogits.size(); i++)
         {
@@ -119,6 +121,7 @@ int main()
         }
         dlogits = scalar_multiply(dlogits, 1.0 / X.size());
 
+        // Backward pass through weights between hidden and output layer
         // dlogits = batch * 10, A1 = batch * 200, W2 = 200 * 10
         auto t_A1 = transpose(A1);
         vector<vector<double>> dW2 = matmul(t_A1, dlogits);
@@ -126,6 +129,7 @@ int main()
         auto t_W2 = transpose(W2);
         vector<vector<double>> dA1 = matmul(dlogits, t_W2);
 
+        // Backward pass through tanh activation
         vector<vector<double>> dZ1 = zeros(Z1.size(), Z1[0].size());
         for (int i = 0; i < dZ1.size(); i++)
         {
@@ -135,6 +139,7 @@ int main()
             }
         }
 
+        // Backward pass through weights between hidden and input layer
         vector<vector<double>> db1 = zeros(b1.size(), b1[0].size());
         for (int j = 0; j < dZ1[0].size(); j++)
         {
@@ -145,10 +150,11 @@ int main()
         }
 
         vector<vector<double>> dm1 = dZ1;
-
+        
         auto t_X = transpose(X);
         vector<vector<double>> dW1 = matmul(t_X, dm1);
 
+        // Updation of parameters
         auto s_m_1 = scalar_multiply(dW1, -1.0 * learning_rate);
         W1 = addMatrices(W1, s_m_1);
 
