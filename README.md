@@ -2,14 +2,14 @@
 Handwritten digit recognition with c++  
 
 `Matrix.cpp` contains Matrix operations and other utiliy functions like
-  - generating normal distribution for initialization of weights
-  - matrix multiplication, addition, scalar multiplication, dot product
-  - softmax, accuracy_score
-  - mini batch sampling
+  - Generating normal distribution for initialization of weights
+  - Matrix multiplication, addition, scalar multiplication, dot product
+  - Softmax, accuracy_score
+  - Randomly sampling mini batch
 
 `Neural_network.cpp` contains `main` function which has
   - Foward pass and backward pass
-  - determination test data accuracy 
+  - Determination of test data accuracy 
 
 <hr>
 
